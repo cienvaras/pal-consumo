@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <title>Pal Consumo</title>
+</head>
+<body ng-app="palConsumo">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Pal Consumo</a>
+  </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Configuración</button></li>
+    </ul>
+    </div>
+  </nav>
+  <main>
+    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1004px; height: 869px;'><noscript><a href='#'><img alt='MAPA FINAL ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pa&#47;PalConsumo&#47;MAPAFINAL&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1004' height='869' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='PalConsumo&#47;MAPAFINAL' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pa&#47;PalConsumo&#47;MAPAFINAL&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+  </main>
+  <div class="modal fade bs-example-modal-lg" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel">Configuración</h4>
+        </div>
+        <div class="modal-body">
+          <form ng-controller="ConfController as conf">
+            <div class="form-group">
+              <label for="form-conf-direccion">Dirección</label>
+              <input type="text" class="form-control" id="form-conf-direccion" placeholder="Dirección" value="{{conf.datos.direccion}}">
+            </div>
+            <div class="form-group">
+              <label for="form-conf-numero">Número</label>
+              <input type="text" class="form-control" id="form-conf-numero" placeholder="Número" value="{{conf.datos.numero}}">
+            </div>
+            <div class="form-group">
+              <label for="form-conf-apto">Apartamento</label>
+              <input type="text" class="form-control" id="form-conf-apto" placeholder="Apartamento" value="{{conf.datos.apto}}">
+            </div>
+            <div class="form-group">
+              <label for="form-conf-residentes">Número de residentes</label>
+              <input type="number" class="form-control" id="form-conf-residentes" placeholder="Número de residentes" value="{{conf.datos.residentes}}">
+            </div>
+            <div class="form-group">
+              <label for="form-conf-m2">Metros cuadrados</label>
+              <input type="text" class="form-control" id="form-conf-m2" placeholder="Metros cuadrados" value="{{conf.datos.metros}}">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</body>
+</html>
