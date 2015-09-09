@@ -1,3 +1,11 @@
 .navbar-nav  {
   padding-top: 8px;
 }
+
+.navbar-brand {
+  padding-top: 5px;
+}
+
+.navbar-brand img {
+  display: inline;
+}
