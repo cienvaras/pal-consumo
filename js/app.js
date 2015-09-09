@@ -8,10 +8,4 @@ angular.module('palConsumo', [])
       residentes: 4,
       metros: '120',
     }
-  })
-  .controller('CompareController', function() {
-    var compare = this;
-    compare.datos = {
-      consumoAgua: 3900,
-    }
   });
